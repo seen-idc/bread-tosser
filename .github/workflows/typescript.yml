@@ -1,0 +1,19 @@
+name: 'Typescript Type Checking'
+on:
+  push:
+  pull_request:
+
+jobs:
+  typechecks:
+    name: Typescript Type checking
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install Node v17
+        uses: actions/setup-node@v1
+        with:
+          node-version: 17
+      - name: Install Packages
+        run: npm install
+      - name: Typescript
+        uses: icrawl/action-tsc@v1
