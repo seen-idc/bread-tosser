@@ -153,7 +153,7 @@ export default defCommand({
 
         if (message.guild) {
           let user = await message.guild.members.fetch({
-            user: targetUser
+            user: targetUser,
           })
 
           if (user.kickable) {
