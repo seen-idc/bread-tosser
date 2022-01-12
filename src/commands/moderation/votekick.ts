@@ -49,8 +49,8 @@ export default defCommand({
     }
 
     const row = new MessageActionRow().addComponents(
-      new MessageButton().setCustomId('votekick-yes').setLabel('Yes').setStyle('PRIMARY'),
-      new MessageButton().setCustomId('votekick-no').setLabel('No').setStyle('PRIMARY')
+      new MessageButton().setCustomId('votekick-yes').setLabel('Yes').setStyle('SUCCESS'),
+      new MessageButton().setCustomId('votekick-no').setLabel('No').setStyle('DANGER')
     )
 
     const endedRow = new MessageActionRow().addComponents(
