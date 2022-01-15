@@ -156,8 +156,10 @@ export default defCommand({
             user: targetUser,
           })
 
-          if (user.kickable) {
-            user.kick('votebaned')
+          if (user.bannable) {
+            user.ban({
+              reason: 'votebanned'
+            })
           }
         }
 
