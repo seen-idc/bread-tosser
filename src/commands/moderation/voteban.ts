@@ -77,8 +77,7 @@ export default defCommand({
     let alreadyWarned: string[] = []
 
     const filter = (i: MessageComponentInteraction) =>
-      i.message.id == voteMessage.id &&
-      (i.customId == 'voteban-yes' || i.customId == 'voteban-no')
+      i.message.id == voteMessage.id && (i.customId == 'voteban-yes' || i.customId == 'voteban-no')
 
     const collector = message.channel.createMessageComponentCollector({
       filter,
@@ -158,7 +157,7 @@ export default defCommand({
 
           if (user.bannable) {
             user.ban({
-              reason: 'votebanned'
+              reason: 'votebanned',
             })
           }
         }
